@@ -15,8 +15,9 @@ This is a template I created for future uses. This includes a simple task crud a
 
 - composer install
 
-# List of routes
+## List of routes
 
+```php
 #public routes
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -31,6 +32,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/tasks/{id}', [TasksController::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
+```
+## To Do
+
+Use SOLID Principles
 
 ## License
 
